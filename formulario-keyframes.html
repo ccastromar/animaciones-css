@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animaciones css - transiciones - boton</title>
+<style>
+.lab {
+   background-color: #FFFFFF;
+     border: 1px solid #000000;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    max-width: 500px;
+    height: 460px;
+    
+}
+.lab.h4 {
+   color: #000000;
+}
+@keyframes desplace{
+     0%{opacity:0 ; transform: translateX(0px)}
+    70% { opacity:0.8 ;transform:translateY(500px) translateX(0px);}
+    80% { opacity:0.9 ;transform:translateY(450px) translateX(0px) rotate(-3deg);}
+    90% { opacity:1 ;transform:translateY(475px) translateX(0px) rotate(3deg);}       
+    100% { opacity:1 ;transform:translateY(475px) translateX(0px) rotate(0deg);   }
+    
+}
+#id_form {
+  opacity: 0;
+  max-width:380px;
+  height: 180px;
+  margin:auto;
+  padding:0px;
+  color: white;
+  border: 2px solid #5882FA;
+  background-color: #5882FA;
+}
+
+.id_form .h4 {
+   background-color: blue;
+}
+.activo {
+  animation: desplace 1.5s ease-in-out 0.2s forwards;
+}
+</style>
+</head>
+<body>
+<div id="id_form">
+<form name="nform">
+<div style="border: 0px solid red; height: 100px; padding: 15px;">
+<div style="border: 0px solid red; float: left; max-width: 175px;">
+<i align="center" class="fa fa-envelope fa-5x"></i>
+</div>
+<div style="float: left; width: 20px;">
+</div>
+<div style="border: 0px solid red; float: left; max-width: 250px; text-align: center;">
+<strong>SUSCRIBETE</strong><br />
+Suscríbete a nuestra newsletter para obtener los mejores artículos de tecnología justo en tu buzón.</div>
+</div>
+<div style="background-color: #e0e6f8; border: 0px solid red; height: 50px; line-height: 40px; margin: 0; padding: 0; text-align: center; vertical-align: bottom;">
+<input name="email" placeholder="Escribe tu email..." size="15" style="border: 1px solid blue; height: 16px; vertical-align: bottom;" type="text" value="" />
+<button style="background-color: #e0e6f8; border: 0px solid blue; height: 14px; vertical-align: middle;"><i class="fa fa-check-square fa-2x" style="color: #5882fa; line-height: 20px; vertical-align: bottom;"></i></button>
+</div>
+</form>
+</div>
+<script>
+function suscribete(){ 
+   var d = document.getElementById("id_form");
+   d.className = "activo";
+}
+</script>
+
+<div class="lab">
+<h4>Pruébalo</h4>
+<button onclick="suscribete()">Invoca formulario</button>
+</div>
+</body>
+</html>
