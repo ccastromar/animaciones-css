@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animaciones css - transiciones - boton</title>
+<style>
+.texto {
+   position: relative;  
+   width: 150px;
+   height: 25px;
+   transition: left 0.5s;
+}
+.primer {
+   left: 30px;
+   top: 0px;
+}
+.segundo {
+  left: 75px;
+   top: 0;
+}
+.boton {
+   width: 100px;
+   height: 30px;
+   position:relative;
+   background-color: #1122AA;
+   border-radius: 25px;
+   color: #FFFFFF;
+   transition: background-color 1s, color 1s;
+   overflow: hidden; 
+}
+.boton:hover {
+   color: #CCCCCC;
+   background-color: #f52211;
+}
+.boton:hover .primer{
+  left: 100px;
+  top: 0px;
+}
+.boton:hover .segundo{
+   left:-20px;
+   top: 0px;
+}
+</style>
+</head>
+<body>
+<button class="boton"><span class="texto primer">129€</span><span class="texto segundo">COMPRAR</span></button>
+</body>
+</html>
