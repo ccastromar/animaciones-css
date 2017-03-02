@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animaciones css - transiciones - boton</title>
+<style>
+.lab {
+   background-color: #FFFFFF;
+     border: 1px solid #000000;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    max-width: 500px;
+    height: 540px;
+    
+}
+
+.lab.h4 {
+   color: #000000;
+}
+.rueda {
+ transition: transform 1s linear;
+ max-width:128px;
+ background-color: #FFFFFF;
+ padding: 0px;
+ margin: 0px;
+
+}
+
+.rueda:hover {
+ background-color: #FFFFFF;
+ transform: translate(300px,0px) rotate(360deg) skew(10deg,10deg);
+}
+
+.fotoalbum {
+   padding-top:20px;
+}
+
+.foto{
+   transition: transform 0.7s linear;
+   float: left;
+   padding: 15px;
+}
+
+.foto:hover {
+   transform: scale(1.3) rotate(10deg) translateY(15px);
+}
+</style>
+</head>
+<body>
+<br />
+<div class="lab">
+<h4>
+Pruébalo</h4>
+<br />
+<div class="rueda">
+<img height="128" src="https://4.bp.blogspot.com/-fG8NbvUiVCI/V_35oC0W-RI/AAAAAAAAEKk/K3VWeTOYETowyFyd3rwskp3VDzuxrdtewCLcB/s1600/ruedita.png" width="128" />
+</div>
+<div class="fotoalbum">
+<div class="foto">
+<img height="113" src="https://3.bp.blogspot.com/-_FaDD34PaJs/V_TfC-9IvnI/AAAAAAAAEJk/yqmSz2LE6O8ElGDblJhjbcHL7Zk3KdcHwCEw/s200/mandelbulb7.png" width="200" /></div>
+<div class="foto">
+<img height="113" src="https://1.bp.blogspot.com/-OdlkWwIeUDg/V_TfB-Iow3I/AAAAAAAAEJM/pxJyfvRAKvwepyTacBnHgsx0LfKot7AmACEw/s200/mandelbulb2.png" /></div>
+<div class="foto">
+<img height="113" src="https://4.bp.blogspot.com/-p4CC55b87cE/V_TfBygN0XI/AAAAAAAAEJQ/yQpUKVZftRw1IWPR6-0-vcS8mcjm4IzOgCEw/s200/mandelbulb3.png" /></div>
+</div>
+</div>
+</body>
+</html>
